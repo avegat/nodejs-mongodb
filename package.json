@@ -1,0 +1,18 @@
+{
+  "name": "unir-demo",
+  "version": "1.0.0",
+  "description": "API simple de ejemplo con Express",
+  "main": "src/unir/main.js",
+  "scripts": {
+    "start": "node src/unir/main.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0",
+    "cors": "^2.8.5",
+    "helmet" : "^4.2.0",
+    "dotenv" : "16.4.5",
+    "custom-env": "*",
+    "mongoose":"^8.2.0"
+  }
+}
