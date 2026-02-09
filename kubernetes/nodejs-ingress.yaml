@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nodejs-ingress
+  namespace: unir-containers
+  labels:
+    app/repo: nodejs-mongodb
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: localhost
+      http:
+        paths:
+          - backend:
+              service:
+                name: nodejs-service
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix

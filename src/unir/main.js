@@ -8,8 +8,12 @@ const database = require('./db/mongodb');
 
 
 const PORT = 3000;
-console.log(process.env.MONGOCONN)
-database.connectToDB(process.env.MONGOCONN).then(() => {
+
+var url="mongodb://"+process.env.MONGODB_USER+":"+process.env.PASSWORD+"@"+process.env.MONGODB_HOST+"/"+process.env.MONGODB_DATABASE+"?authSource=admin"
+process.env.MONGOCONN
+//mongodb://admin:pass@host/database?authSource=admin
+console.log(url)
+database.connectToDB(url).then(() => {
   server=app.listen(PORT, () => {
   console.log(`Servidor escuchando en http://localhost:${PORT}`);});
 

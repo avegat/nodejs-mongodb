@@ -1,8 +1,11 @@
 # Imagen base oficial de Node LTS
 FROM node:18-alpine
+RUN apk add --no-cache curl
 
-ENV MONGOCONN_URL =${MONGOCONN_URL}
-
+ENV MONGODB_HOST =${MONGODB_HOST}
+ENV MONGODB_DATABASE =${MONGODB_DATABASE}
+ENV MONGODB_USER = ${MONGODB_USER}
+ENV PASSWORD = ${PASSWORD}
 
 # Directorio de trabajo dentro del contenedor
 WORKDIR /usr/src/app
