@@ -19,8 +19,12 @@ npm install
 2.- Crear archivo de varaibles de ambiente en /
 touch .env
 
-3.- Agregar la variable
-MONGOCONN=mongodb://admin:pass@host/database?authSource=admin
+3.- Agregar la variables de entorno
+MONGODB_HOST= mongo-service
+MONGODB_DATABASE= unir
+MONGODB_USER= admin
+PASSWORD= 
+
 
 4.- Iniciar la aplicación
 npm start
